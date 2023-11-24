@@ -2,7 +2,7 @@ local status, toggleterm = pcall(require, 'toggleterm')
 if not status then return end
 
 toggleterm.setup({
-  size = 20,
+  size = 10,
   open_mapping = [[<leader>\]],
   hide_numbers = true,
   shade_filetypes = {},

@@ -32,7 +32,6 @@ return require('packer').startup(function(use)
 
       use 'numToStr/Comment.nvim'
       use 'lewis6991/gitsigns.nvim' -- Gitsigns
-      use 'dinhhuy258/git.nvim' -- Git
       use 'tpope/vim-fugitive'
       use 'akinsho/toggleterm.nvim' --toggleterm
       use {'SirVer/ultisnips',
