@@ -8,7 +8,7 @@ keymap.set("n", "<leader>pv", vim.cmd.Ex)
 keymap.set('n', '<C-s>', ':w<cr>')
 
 -- Open Fugitive
-keymap.set('n', ';f', ':G<cr> <C-w>o')
+keymap.set('n', '<leader>of', ':G<cr> <C-w>o')
 
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
