@@ -47,4 +47,8 @@ return require("packer").startup(function(use)
 	})
 	use({ "stevearc/conform.nvim" })
 	use({ "mfussenegger/nvim-lint" })
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
 end)
