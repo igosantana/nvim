@@ -5,6 +5,7 @@ vim.cmd([[packadd packer.nvim]])
 return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
+	use("nvim-lua/plenary.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.4",
@@ -50,5 +51,30 @@ return require("packer").startup(function(use)
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
+	use({
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
+	use({
+		"nvim-neorg/neorg",
+		config = function()
+			require("neorg").setup({
+				load = {
+					["core.defaults"] = {}, -- Loads default behaviour
+					["core.concealer"] = {}, -- Adds pretty icons to your documents
+					["core.dirman"] = { -- Manages Neorg workspaces
+						config = {
+							workspaces = {
+								notes = "~/notes",
+							},
+						},
+					},
+				},
+			})
+		end,
+		run = ":Neorg sync-parsers",
+		requires = "nvim-lua/plenary.nvim",
 	})
 end)
