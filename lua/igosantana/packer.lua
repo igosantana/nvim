@@ -57,6 +57,7 @@ return require("packer").startup(function(use)
 						config = {
 							workspaces = {
 								notes = "~/notes",
+								golang = "~/studies/golang",
 							},
 						},
 					},
